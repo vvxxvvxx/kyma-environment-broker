@@ -40,7 +40,7 @@ func NewOperationsResults(db storage.Operations, cfg Config, logger *slog.Logger
 			Subsystem: prometheusSubsystemv2,
 			Name:      "operation_result",
 			Help:      "Metrics of operations results",
-		}, []string{"operation_id", "instance_id", "global_account_id", "plan_id", "type", "state", "error_category", "error_reason", "error"}),
+		}, []string{"operation_id", "instance_id", "shoot_name", "runtime_id", "global_account_id", "plan_id", "type", "state", "error_category", "error_reason", "error"}),
 		pollingInterval:                  cfg.OperationResultPollingInterval,
 		finishedOperationRetentionPeriod: cfg.OperationResultFinishedOperationRetentionPeriod,
 	}

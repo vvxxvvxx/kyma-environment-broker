@@ -144,6 +144,10 @@ func fixRandomOp(createdAt time.Time, state domain.LastOperationState) internal.
 		UpdatedAt: randomUpdatedAtAfterCreatedAt(),
 		Type:      randomType(),
 		State:     state,
+		InstanceDetails: internal.InstanceDetails{
+			ShootName:  "shoot-test0",
+			RuntimeID:  uuid.New().String(),
+		},
 	}
 }
 
